@@ -1,6 +1,5 @@
 import { useState } from "react";
-import heroBgDesktop from "@/assets/hero-bg-desktop.webp";
-import heroBgMobile from "@/assets/hero-bg-mobile.webp";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   const [name, setName] = useState("");
@@ -14,16 +13,14 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Desktop BG */}
-      <div
-        className="absolute inset-0 hidden sm:block bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBgDesktop})` }}
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        width={1920}
+        height={1080}
       />
-      {/* Mobile BG */}
-      <div
-        className="absolute inset-0 block sm:hidden bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBgMobile})` }}
-      />
+      <div className="absolute inset-0 bg-background/80" />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-10 sm:py-20 pb-20">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
