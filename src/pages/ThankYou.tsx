@@ -13,7 +13,7 @@ const ThankYou = () => {
         height={1080}
       />
       <div className="absolute inset-0 bg-background/80" />
-      <div className="flex-1 flex items-center justify-center px-4">
+      <div className="relative z-10 flex-1 flex items-center justify-center px-4">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary/30 bg-primary/10">
