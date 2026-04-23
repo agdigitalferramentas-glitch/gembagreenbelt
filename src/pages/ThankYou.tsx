@@ -1,10 +1,19 @@
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const ThankYou = () => {
   return (
-    <div className="min-h-[100dvh] flex flex-col bg-background">
-      <div className="flex-1 flex items-center justify-center px-4">
+    <div className="relative min-h-[100dvh] flex flex-col bg-background">
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        width={1920}
+        height={1080}
+      />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="relative z-10 flex-1 flex items-center justify-center px-4">
         <div className="max-w-2xl mx-auto text-center space-y-8">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary/30 bg-primary/10">
@@ -38,7 +47,9 @@ const ThankYou = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 };
