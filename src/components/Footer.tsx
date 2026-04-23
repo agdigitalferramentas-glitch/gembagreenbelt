@@ -8,8 +8,9 @@ const Footer = () => (
         <img
           src={gembaLogo}
           alt="Gemba Group"
-          className="h-10 mb-4 brightness-0 invert opacity-80"
+          className="h-8 sm:h-10 w-auto mb-4 object-contain"
           loading="lazy"
+          style={{ imageRendering: "auto", maxWidth: "180px" }}
         />
         <p className="text-muted-foreground text-sm max-w-xs">
           Capacitando profissionais para{"\n"}transformar empresas desde 2008.
