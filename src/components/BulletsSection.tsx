@@ -15,22 +15,22 @@ const scrollToTop = () => {
 };
 
 const BulletsSection = () => (
-  <section className="section-darker py-20 md:py-28">
+  <section className="section-darker py-14 sm:py-20 md:py-28">
     <div className="container mx-auto px-4 max-w-4xl">
-      <div className="text-center mb-14 space-y-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+      <div className="text-center mb-8 sm:mb-14 space-y-3 sm:space-y-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground">
           O que você aprende e o que entrega ao final
         </h2>
-        <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">
+        <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed max-w-3xl mx-auto">
           Antes de qualquer ferramenta, você aprende a escolher o problema certo. Com dois critérios objetivos — impacto financeiro potencial e esforço de implementação — você descarta projetos que consomem energia sem retorno visível e foca no que constrói reputação.
         </p>
       </div>
 
       <div className="space-y-4">
         {bullets.map((b, i) => (
-          <div key={i} className="bullet-card flex gap-4 items-start">
-            <CheckCircle className="w-6 h-6 text-primary shrink-0 mt-0.5" />
-            <p className="text-foreground/90 leading-relaxed">{b}</p>
+          <div key={i} className="bullet-card flex gap-3 sm:gap-4 items-start">
+            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0 mt-0.5" />
+            <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">{b}</p>
           </div>
         ))}
       </div>

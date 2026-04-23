@@ -5,10 +5,10 @@ const scrollToTop = () => {
 };
 
 const AboutSection = () => (
-  <section className="section-dark py-20 md:py-28 relative overflow-hidden">
+  <section className="section-dark py-14 sm:py-20 md:py-28 relative overflow-hidden">
     <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 80% 80%, hsla(185, 100%, 50%, 0.12), transparent 50%)" }} />
-    <div className="container relative z-10 mx-auto px-6">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-8 tracking-tight">
+    <div className="container relative z-10 mx-auto px-4 sm:px-6">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 sm:mb-8 tracking-tight">
         Quem está por trás deste material
       </h2>
 
@@ -45,7 +45,7 @@ const AboutSection = () => (
           <img
             src={gembaTeam}
             alt="Equipe Gemba Group"
-            className="w-full aspect-square object-cover rounded-2xl shadow-2xl"
+            className="w-full aspect-[4/5] sm:aspect-square object-cover rounded-2xl shadow-2xl"
             loading="lazy"
           />
         </div>
