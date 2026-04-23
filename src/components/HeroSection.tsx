@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ name, email, phone });
+    window.location.href = "/gb-obrigado";
   };
 
   return (
