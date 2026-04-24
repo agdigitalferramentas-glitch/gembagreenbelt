@@ -18,8 +18,8 @@ const TestimonialsSection = () => (
     />
     <div className="container relative z-10 mx-auto px-4 sm:px-6">
       <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 sm:mb-6 tracking-tight">
-          O que dizem quem já passou pelo método
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-4 sm:mb-6 tracking-tight [text-wrap:balance]">
+          O que dizem quem já passou pelo&nbsp;método
         </h2>
         <p className="text-foreground/70 text-base sm:text-lg leading-relaxed font-light">
           Depoimentos reais de profissionais que aplicaram o método Gemba e transformaram suas carreiras.

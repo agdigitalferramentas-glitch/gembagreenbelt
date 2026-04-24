@@ -18,8 +18,8 @@ const BulletsSection = () => (
   <section className="section-darker py-14 sm:py-20 md:py-28">
     <div className="container mx-auto px-4 max-w-4xl">
       <div className="text-center mb-8 sm:mb-14 space-y-3 sm:space-y-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground">
-          O que você aprende e o que entrega ao final
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight [text-wrap:balance]">
+          O que você aprende e o que entrega ao&nbsp;final
         </h2>
         <p className="text-muted-foreground text-sm sm:text-lg leading-relaxed max-w-3xl mx-auto">
           Antes de qualquer ferramenta, você aprende a escolher o problema certo. Com dois critérios objetivos — impacto financeiro potencial e esforço de implementação — você descarta projetos que consomem energia sem retorno visível e foca no que constrói reputação.

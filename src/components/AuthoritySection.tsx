@@ -13,8 +13,8 @@ const scrollToTop = () => {
 const AuthoritySection = () => (
   <section className="section-dark py-14 sm:py-20 md:py-28">
     <div className="container mx-auto px-4 max-w-5xl">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground text-center mb-8 sm:mb-14">
-        Esse método foi testado dentro de mais de 1.000 empresas antes de chegar até você neste guia
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-center tracking-tight [text-wrap:balance] mb-8 sm:mb-14">
+        Esse método foi testado dentro de mais de 1.000 empresas antes de chegar até você neste&nbsp;guia
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
