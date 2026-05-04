@@ -1,15 +1,6 @@
-import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = "/gb-obrigado";
-  };
 
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background">
@@ -52,43 +43,14 @@ const HeroSection = () => {
             <h2 className="text-xl font-bold text-foreground text-center mb-6">
               Baixe o guia gratuito
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                type="text"
-                placeholder="Seu nome"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full rounded-xl bg-foreground/10 border border-foreground/15 text-foreground placeholder:text-foreground/30 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                required
-              />
-              <input
-                type="email"
-                placeholder="Seu melhor e-mail"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full rounded-xl bg-foreground/10 border border-foreground/15 text-foreground placeholder:text-foreground/30 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="DDD + WhatsApp"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full rounded-xl bg-foreground/10 border border-foreground/15 text-foreground placeholder:text-foreground/30 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-                required
-              />
-              <div className="flex justify-center mt-2">
-                <button
-                  type="submit"
-                  className="group w-full btn-cta rounded-full flex items-center justify-center gap-2 text-sm sm:text-base"
-                >
-                  <span className="flex-1 text-center">QUERO O GUIA GRATUITO AGORA</span>
-                  <span className="w-11 h-11 rounded-full bg-foreground text-background inline-flex items-center justify-center shadow-md flex-shrink-0 group-hover:rotate-[360deg] transition-all duration-500 ease-out">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                  </span>
-                </button>
-              </div>
-            </form>
+            <iframe
+              src="https://site.agsell.com.br/forms/18d01129-a244-4f98-8e77-a2aef73564db"
+              width="100%"
+              height={400}
+              frameBorder="0"
+              title="Formulário de inscrição"
+              className="w-full rounded-xl bg-transparent"
+            />
           </div>
         </div>
       </div>
