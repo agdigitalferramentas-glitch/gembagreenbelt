@@ -60,17 +60,19 @@ const HeroSection = () => {
             <h2 className="text-xl font-bold text-foreground text-center mb-6">
               Baixe o guia gratuito
             </h2>
-            <iframe
-              id={FRAME_ID}
-              src={`https://site.agsell.com.br/forms/${FORM_ID}`}
-              width="100%"
-              height={600}
-              frameBorder="0"
-              allowTransparency
-              title="Captura de Lead Green Belt"
-              className="w-full rounded-xl bg-transparent border-0 mx-auto"
-              style={{ maxWidth: 600 }}
-            />
+            <div className="mx-auto overflow-hidden" style={{ maxWidth: 600 }}>
+              <iframe
+                id={FRAME_ID}
+                src={`https://site.agsell.com.br/forms/${FORM_ID}`}
+                width="100%"
+                height={600}
+                frameBorder="0"
+                allowTransparency
+                title="Captura de Lead Green Belt"
+                className="w-full bg-transparent border-0 block"
+                style={{ marginTop: -90 }}
+              />
+            </div>
           </div>
         </div>
       </div>
