@@ -39,15 +39,18 @@ const HeroSection = () => {
           </div>
 
           {/* Right — Form */}
-          <div className="rounded-2xl border border-foreground/10 bg-white shadow-2xl overflow-hidden">
-            <div className="relative w-full h-[480px] overflow-hidden">
-              <iframe
-                src="https://site.agsell.com.br/forms/18d01129-a244-4f98-8e77-a2aef73564db"
-                title="Formulário de inscrição"
-                className="absolute left-0 w-full bg-white"
-                style={{ top: -96, height: 580, border: 0 }}
-              />
-            </div>
+          <div className="rounded-2xl p-5 sm:p-8 md:p-10 border border-foreground/10 bg-foreground/5 backdrop-blur-md shadow-2xl">
+            <h2 className="text-xl font-bold text-foreground text-center mb-6">
+              Baixe o guia gratuito
+            </h2>
+            <iframe
+              src="https://site.agsell.com.br/forms/18d01129-a244-4f98-8e77-a2aef73564db"
+              width="100%"
+              height={400}
+              frameBorder="0"
+              title="Formulário de inscrição"
+              className="w-full rounded-xl bg-transparent"
+            />
           </div>
         </div>
       </div>
