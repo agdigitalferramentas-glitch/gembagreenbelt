@@ -1,6 +1,23 @@
+import { useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
+const FORM_ID = "18d01129-a244-4f98-8e77-a2aef73564db";
+const FRAME_ID = `agsell-form-frame-${FORM_ID}`;
+
 const HeroSection = () => {
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      const data = e.data as { type?: string; formId?: string; height?: number } | null;
+      if (data && data.type === "agsell-form-height" && data.formId === FORM_ID) {
+        const frame = document.getElementById(FRAME_ID) as HTMLIFrameElement | null;
+        if (frame && typeof data.height === "number") {
+          frame.style.height = `${data.height}px`;
+        }
+      }
+    };
+    window.addEventListener("message", handler);
+    return () => window.removeEventListener("message", handler);
+  }, []);
 
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background">
@@ -44,12 +61,15 @@ const HeroSection = () => {
               Baixe o guia gratuito
             </h2>
             <iframe
-              src="https://site.agsell.com.br/forms/18d01129-a244-4f98-8e77-a2aef73564db"
+              id={FRAME_ID}
+              src={`https://site.agsell.com.br/forms/${FORM_ID}`}
               width="100%"
-              height={400}
+              height={600}
               frameBorder="0"
-              title="Formulário de inscrição"
-              className="w-full rounded-xl bg-transparent"
+              allowTransparency
+              title="Captura de Lead Green Belt"
+              className="w-full rounded-xl bg-transparent border-0 mx-auto"
+              style={{ maxWidth: 600 }}
             />
           </div>
         </div>
