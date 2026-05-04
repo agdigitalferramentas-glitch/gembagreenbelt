@@ -1,15 +1,6 @@
-import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = "/gb-obrigado";
-  };
 
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background">
