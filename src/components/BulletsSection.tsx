@@ -35,10 +35,8 @@ const BulletsSection = () => (
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <button onClick={scrollToTop} className="btn-cta">
-          Quero o guia gratuito agora
-        </button>
+      <div className="mt-12 flex justify-center">
+        <CtaButton onClick={scrollToTop}>Quero o guia gratuito agora</CtaButton>
       </div>
     </div>
   </section>
