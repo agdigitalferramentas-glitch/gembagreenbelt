@@ -50,13 +50,20 @@ const HeroSection = () => {
             <p className="text-sm sm:text-lg text-foreground font-semibold leading-relaxed">
               Gestores não chamam quem se esforça mais. Eles chamam quem consegue transformar qualquer problema em projeto com resultado financeiro comprovado.
             </p>
-            <p className="text-xs sm:text-base text-foreground/90 font-light leading-relaxed">
-              Este guia entrega esse método completo, passo a passo, em 60 dias.
-            </p>
-
-            <p className="text-xs sm:text-sm text-foreground/80 font-light">
-              Gratuito. Com cases reais, calculadora de ROI e ferramentas prontas para aplicar no seu trabalho hoje.
-            </p>
+            <ul className="space-y-2 text-xs sm:text-base text-foreground/90 font-light leading-relaxed">
+              {[
+                "Método completo, passo a passo, em 60 dias",
+                "Gratuito",
+                "Cases reais, calculadora de ROI e ferramentas prontas para aplicar hoje",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <svg className="mt-1 h-4 w-4 flex-shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Right — Form */}
