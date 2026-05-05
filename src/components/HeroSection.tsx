@@ -38,9 +38,9 @@ const HeroSection = () => {
               Material gratuito e exclusivo
             </span>
 
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15] tracking-tight text-foreground">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-extrabold leading-[1.15] tracking-tight text-foreground [text-wrap:balance]">
               O guia completo para você transformar o resultado que já entrega em uma{" "}
-              <span className="text-gradient-accent">promoção concreta</span>, nos próximos 60 dias
+              <span className="text-gradient-accent">promoção concreta</span>, nos próximos 60&nbsp;dias
             </h1>
 
             <p className="text-sm sm:text-lg text-foreground font-semibold leading-relaxed">
