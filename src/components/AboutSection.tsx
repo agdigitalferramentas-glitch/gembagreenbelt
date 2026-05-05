@@ -1,4 +1,5 @@
 import gembaTeam from "@/assets/gemba-team.webp";
+import CtaButton from "./CtaButton";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
