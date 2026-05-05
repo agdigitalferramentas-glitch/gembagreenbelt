@@ -19,9 +19,9 @@ const AuthoritySection = () => (
         Esse método foi testado dentro de mais de 1.000 empresas antes de chegar até você neste&nbsp;guia
       </h2>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {stats.map((s, i) => (
-          <div key={i} className="glass-card rounded-xl p-8 text-center space-y-2">
+          <div key={i} className="glass-card rounded-xl p-8 text-center space-y-2 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <div className="stat-number">{s.number}</div>
             <p className="text-muted-foreground text-sm">{s.label}</p>
           </div>
