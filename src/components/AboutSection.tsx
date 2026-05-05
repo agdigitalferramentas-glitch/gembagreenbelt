@@ -46,15 +46,6 @@ const AboutSection = () => (
             <CtaButton onClick={scrollToTop}>Quero o guia gratuito agora</CtaButton>
           </div>
         </div>
-
-        <div className="lg:w-1/2">
-          <img
-            src={gembaTeam}
-            alt="Equipe Gemba Group"
-            className="w-full aspect-[4/5] sm:aspect-square object-cover rounded-2xl shadow-2xl"
-            loading="lazy"
-          />
-        </div>
       </div>
     </div>
   </section>
