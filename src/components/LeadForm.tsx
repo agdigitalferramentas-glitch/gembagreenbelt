@@ -57,7 +57,7 @@ const LeadForm = () => {
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
-      navigate("/obrigado");
+      navigate("/gb-obrigado");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro desconhecido");
     } finally {
