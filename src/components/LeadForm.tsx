@@ -109,7 +109,7 @@ const LeadForm = () => {
         disabled={loading}
         className="group relative w-full h-14 rounded-full bg-accent text-accent-foreground font-bold text-sm sm:text-base tracking-wide uppercase shadow-[0_0_30px_hsla(156,58%,45%,0.35)] hover:shadow-[0_0_45px_hsla(156,58%,45%,0.55)] hover:scale-[1.01] active:scale-[0.99] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
       >
-        <span className="flex items-center justify-center gap-3 px-12">
+        <span className="flex items-center justify-center gap-3 pl-12 pr-16">
           {loading ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin" />

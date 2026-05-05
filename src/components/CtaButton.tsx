@@ -14,7 +14,7 @@ const CtaButton = ({ children, className, ...props }: CtaButtonProps) => (
       className,
     )}
   >
-    <span className="flex items-center justify-center gap-3 px-12">{children}</span>
+    <span className="flex items-center justify-center gap-3 pl-12 pr-16">{children}</span>
     <span className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-background text-accent group-hover:translate-x-1 transition-transform">
       <ArrowRight className="w-5 h-5" />
     </span>
