@@ -26,7 +26,7 @@ const BulletsSection = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 [&>*:last-child:nth-child(odd)]:md:col-span-2 [&>*:last-child:nth-child(odd)]:md:max-w-[calc(50%-0.5rem)] [&>*:last-child:nth-child(odd)]:md:mx-auto [&>*:last-child:nth-child(odd)]:md:w-full">
         {bullets.map((b, i) => (
           <div key={i} className="bullet-card flex gap-3 sm:gap-4 items-start">
             <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0 mt-0.5" />
