@@ -1,3 +1,5 @@
+import CtaButton from "./CtaButton";
+
 const stats = [
   { number: "+30 mil", label: "profissionais capacitados em todo o Brasil" },
   { number: "+R$ 1 bi", label: "em ganhos gerados para os clientes" },
@@ -30,10 +32,8 @@ const AuthoritySection = () => (
         Os cases que estão neste guia são reais. Os números são reais. E o método é o mesmo.
       </p>
 
-      <div className="mt-10 text-center">
-        <button onClick={scrollToTop} className="btn-cta">
-          Quero o guia gratuito agora
-        </button>
+      <div className="mt-10 flex justify-center">
+        <CtaButton onClick={scrollToTop}>Quero o guia gratuito agora</CtaButton>
       </div>
     </div>
   </section>

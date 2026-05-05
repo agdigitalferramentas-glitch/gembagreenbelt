@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import CtaButton from "./CtaButton";
 
 const bullets = [
   "A metodologia DMAIC completa explicada de forma prática, com o que fazer em cada uma das 5 fases, quais ferramentas usar e o que entregar ao gestor ao final de cada etapa, sem enrolação acadêmica",
@@ -35,10 +36,8 @@ const BulletsSection = () => (
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <button onClick={scrollToTop} className="btn-cta">
-          Quero o guia gratuito agora
-        </button>
+      <div className="mt-12 flex justify-center">
+        <CtaButton onClick={scrollToTop}>Quero o guia gratuito agora</CtaButton>
       </div>
     </div>
   </section>

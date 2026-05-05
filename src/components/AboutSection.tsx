@@ -1,4 +1,5 @@
 import gembaTeam from "@/assets/gemba-team.webp";
+import CtaButton from "./CtaButton";
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,12 +33,7 @@ const AboutSection = () => (
           </p>
 
           <div className="mt-10">
-            <button onClick={scrollToTop} className="group w-full btn-cta rounded-full flex items-center justify-center gap-2 text-sm sm:text-base">
-              <span className="flex-1 text-center">QUERO O GUIA GRATUITO AGORA</span>
-              <span className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-foreground text-background inline-flex items-center justify-center shadow-md flex-shrink-0 group-hover:rotate-[360deg] transition-all duration-500 ease-out">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform duration-300"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </span>
-            </button>
+            <CtaButton onClick={scrollToTop}>Quero o guia gratuito agora</CtaButton>
           </div>
         </div>
 
