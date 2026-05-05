@@ -1,3 +1,6 @@
+import { Play } from "lucide-react";
+import { useState } from "react";
+
 const videos = [
   "nkxiOrYzKps",
   "wJQeUW8ZQQA",
@@ -6,6 +9,45 @@ const videos = [
   "mCfsnekzJ0o",
   "VRcPrcZigHM",
 ];
+
+const VideoCard = ({ id }: { id: string }) => {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-foreground/10 bg-background">
+      {playing ? (
+        <iframe
+          src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`}
+          title={`Depoimento ${id}`}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full"
+        />
+      ) : (
+        <button
+          type="button"
+          onClick={() => setPlaying(true)}
+          aria-label="Reproduzir vídeo"
+          className="group absolute inset-0 w-full h-full"
+        >
+          <img
+            src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`}
+            alt="Capa do depoimento"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/30 group-hover:bg-background/40 transition-colors" />
+          <span className="absolute inset-0 flex items-center justify-center">
+            <span className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent text-accent-foreground shadow-[0_0_30px_hsla(156,58%,45%,0.5)] group-hover:scale-110 transition-transform">
+              <Play className="w-7 h-7 sm:w-8 sm:h-8 ml-1" fill="currentColor" />
+            </span>
+          </span>
+        </button>
+      )}
+    </div>
+  );
+};
 
 const TestimonialsSection = () => (
   <section className="section-dark py-14 sm:py-20 md:py-28 relative overflow-hidden">
@@ -28,19 +70,7 @@ const TestimonialsSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
         {videos.map((id) => (
-          <div
-            key={id}
-            className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-foreground/10 bg-background"
-          >
-            <iframe
-              src={`https://www.youtube.com/embed/${id}`}
-              title={`Depoimento ${id}`}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
+          <VideoCard key={id} id={id} />
         ))}
       </div>
     </div>
