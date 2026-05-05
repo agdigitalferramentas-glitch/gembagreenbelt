@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import CtaButton from "./CtaButton";
 
 const bullets = [
   "A metodologia DMAIC completa explicada de forma prática, com o que fazer em cada uma das 5 fases, quais ferramentas usar e o que entregar ao gestor ao final de cada etapa, sem enrolação acadêmica",
