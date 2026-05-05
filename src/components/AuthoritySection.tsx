@@ -1,3 +1,5 @@
+import CtaButton from "./CtaButton";
+
 const stats = [
   { number: "+30 mil", label: "profissionais capacitados em todo o Brasil" },
   { number: "+R$ 1 bi", label: "em ganhos gerados para os clientes" },
