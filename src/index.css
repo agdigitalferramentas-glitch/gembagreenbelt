@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    --background: 220 60% 8%;
-    --foreground: 210 40% 98%;
+    --background: 156 23% 13%;
+    --foreground: 150 20% 96%;
 
-    --card: 220 50% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 156 23% 17%;
+    --card-foreground: 150 20% 96%;
 
-    --popover: 220 50% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 156 23% 17%;
+    --popover-foreground: 150 20% 96%;
 
-    --primary: 160 100% 45%;
-    --primary-foreground: 220 60% 8%;
+    --primary: 156 58% 45%;
+    --primary-foreground: 156 23% 13%;
 
-    --secondary: 210 80% 55%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 156 30% 25%;
+    --secondary-foreground: 150 20% 96%;
 
-    --muted: 220 40% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 156 20% 20%;
+    --muted-foreground: 150 15% 70%;
 
-    --accent: 185 100% 50%;
-    --accent-foreground: 220 60% 8%;
+    --accent: 156 58% 45%;
+    --accent-foreground: 156 23% 13%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 150 20% 96%;
 
-    --border: 220 30% 22%;
-    --input: 220 30% 18%;
-    --ring: 160 100% 45%;
+    --border: 156 20% 25%;
+    --input: 156 20% 20%;
+    --ring: 156 58% 45%;
 
     --radius: 0.75rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(220 60% 8%) 0%, hsl(215 70% 14%) 50%, hsl(220 60% 8%) 100%);
-    --glass-bg: hsla(220, 50%, 15%, 0.6);
-    --glass-border: hsla(210, 40%, 98%, 0.1);
-    --glow-primary: 0 0 40px hsla(160, 100%, 45%, 0.3);
-    --glow-accent: 0 0 30px hsla(185, 100%, 50%, 0.2);
+    --hero-gradient: linear-gradient(135deg, hsl(156 23% 13%) 0%, hsl(156 28% 18%) 50%, hsl(156 23% 13%) 100%);
+    --glass-bg: hsla(156, 23%, 18%, 0.6);
+    --glass-border: hsla(150, 20%, 96%, 0.1);
+    --glow-primary: 0 0 40px hsla(156, 58%, 45%, 0.3);
+    --glow-accent: 0 0 30px hsla(156, 58%, 45%, 0.25);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -73,7 +73,7 @@
 
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(185 100% 50%), hsl(160 100% 45%));
+    background-image: linear-gradient(135deg, hsl(156 58% 45%), hsl(156 58% 60%));
   }
 
   .btn-cta {
@@ -83,7 +83,7 @@
 
   .btn-cta:hover {
     @apply scale-105;
-    box-shadow: 0 0 60px hsla(160, 100%, 45%, 0.5);
+    box-shadow: 0 0 60px hsla(156, 58%, 45%, 0.5);
   }
 
   .section-dark {
@@ -91,7 +91,7 @@
   }
 
   .section-darker {
-    background: hsl(220 55% 6%);
+    background: hsl(156 25% 9%);
   }
 
   .bullet-card {
@@ -99,7 +99,7 @@
   }
 
   .bullet-card:hover {
-    border-color: hsla(160, 100%, 45%, 0.3);
+    border-color: hsla(156, 58%, 45%, 0.3);
     box-shadow: var(--glow-accent);
   }
 
