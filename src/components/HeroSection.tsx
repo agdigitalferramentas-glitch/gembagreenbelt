@@ -14,7 +14,7 @@ const HeroSection = () => {
       />
       <div className="absolute inset-0 bg-background/80" />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 pt-20 sm:py-20 pb-10 sm:pb-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 pt-10 sm:py-20 pb-10 sm:pb-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left — Copy */}
           <div className="space-y-4 sm:space-y-6">
