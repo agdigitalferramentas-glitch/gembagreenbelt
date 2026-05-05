@@ -35,7 +35,7 @@ const HeroSection = () => {
           {/* Left — Copy */}
           <div className="space-y-4 sm:space-y-6">
             <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-accent/30 text-accent bg-accent/15">
-              Material gratuito e exclusivo — Gemba Group + Produzzi
+              Material gratuito e exclusivo
             </span>
 
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15] tracking-tight text-foreground">
