@@ -67,18 +67,23 @@ const HeroSection = () => {
           </div>
 
           {/* Right — Form */}
-          <div className="w-full">
-            <iframe
-              id={FRAME_ID}
-              src={`https://site.agsell.com.br/forms/${FORM_ID}`}
-              width="100%"
-              height={400}
-              frameBorder="0"
-              allowTransparency
-              title="Baixe o guia gratuito"
-              className="w-full bg-transparent border-0 block mx-auto"
-              style={{ maxWidth: 600, transition: "height 0.3s ease" }}
-            />
+          <div className="rounded-2xl p-5 sm:p-8 md:p-10 border border-foreground/10 bg-foreground/5 backdrop-blur-md shadow-2xl">
+            <h2 className="text-xl font-bold text-foreground text-center mb-6">
+              Baixe o guia gratuito
+            </h2>
+            <div className="mx-auto overflow-hidden" style={{ maxWidth: 600, maxHeight: 360 }}>
+              <iframe
+                id={FRAME_ID}
+                src={`https://site.agsell.com.br/forms/${FORM_ID}`}
+                width="100%"
+                height={600}
+                frameBorder="0"
+                allowTransparency
+                title="Baixe o guia gratuito"
+                className="w-full bg-transparent border-0 block"
+                style={{ marginTop: -180 }}
+              />
+            </div>
           </div>
         </div>
       </div>
