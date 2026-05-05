@@ -1,25 +1,8 @@
-import { useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoPfpl from "@/assets/logo-pfpl.svg";
-
-const FORM_ID = "18d01129-a244-4f98-8e77-a2aef73564db";
-const FRAME_ID = `agsell-form-frame-${FORM_ID}`;
+import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
-  useEffect(() => {
-    const handler = (e: MessageEvent) => {
-      const data = e.data as { type?: string; formId?: string; height?: number } | null;
-      if (data && data.type === "agsell-form-height" && data.formId === FORM_ID) {
-        const frame = document.getElementById(FRAME_ID) as HTMLIFrameElement | null;
-        if (frame && typeof data.height === "number") {
-          frame.style.height = `${data.height}px`;
-        }
-      }
-    };
-    window.addEventListener("message", handler);
-    return () => window.removeEventListener("message", handler);
-  }, []);
-
   return (
     <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-background">
       <img
