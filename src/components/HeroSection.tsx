@@ -34,7 +34,11 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left — Copy */}
           <div className="space-y-4 sm:space-y-6">
-            <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-accent/30 text-accent bg-accent/15">
+            <span className="inline-flex items-center gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-accent/30 text-accent bg-accent/15">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
               Material gratuito e exclusivo
             </span>
 
