@@ -53,13 +53,10 @@ const HeroSection = () => {
             <ul className="space-y-2 text-xs sm:text-base text-foreground/90 font-light leading-relaxed">
               {[
                 "Método completo, passo a passo, em 60 dias",
-                "Gratuito",
                 "Cases reais, calculadora de ROI e ferramentas prontas para aplicar hoje",
               ].map((item) => (
-                <li key={item} className="flex items-start gap-2">
-                  <svg className="mt-1 h-4 w-4 flex-shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" aria-hidden="true" />
                   <span>{item}</span>
                 </li>
               ))}
