@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoPfpl from "@/assets/logo-pfpl.svg";
 
 const FORM_ID = "18d01129-a244-4f98-8e77-a2aef73564db";
 const FRAME_ID = `agsell-form-frame-${FORM_ID}`;
@@ -41,6 +42,8 @@ const HeroSection = () => {
               </span>
               Material gratuito e exclusivo
             </span>
+
+            <img src={logoPfpl} alt="Logo PFPL" className="h-12 sm:h-16 w-auto" />
 
             <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-extrabold leading-[1.15] tracking-tight text-foreground [text-wrap:balance]">
               O guia completo para você transformar o resultado que já entrega em uma{" "}
