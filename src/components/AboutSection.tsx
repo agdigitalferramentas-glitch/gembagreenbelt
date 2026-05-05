@@ -6,7 +6,7 @@ const scrollToTop = () => {
 
 const AboutSection = () => (
   <section className="section-dark py-14 sm:py-20 md:py-28 relative overflow-hidden">
-    <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 80% 80%, hsla(185, 100%, 50%, 0.12), transparent 50%)" }} />
+    <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 80% 80%, hsla(156, 58%, 45%, 0.12), transparent 50%)" }} />
     <div className="container relative z-10 mx-auto px-4 sm:px-6">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 sm:mb-8 tracking-tight [text-wrap:balance]">
         Quem está por trás deste&nbsp;material
