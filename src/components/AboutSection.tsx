@@ -9,11 +9,6 @@ const AboutSection = () => (
   <section className="section-dark py-14 sm:py-20 md:py-28 relative overflow-hidden">
     <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle at 80% 80%, hsla(156, 58%, 45%, 0.12), transparent 50%)" }} />
     <div className="container relative z-10 mx-auto px-4 sm:px-6">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 sm:mb-8 tracking-tight [text-wrap:balance]">
-        <span className="lg:block">Quem está por trás</span>{" "}
-        <span className="lg:block">deste material</span>
-      </h2>
-
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
         <div className="order-1 lg:order-2 lg:w-1/2">
           <img
@@ -25,6 +20,10 @@ const AboutSection = () => (
         </div>
 
         <div className="order-2 lg:order-1 lg:w-1/2 space-y-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-2 tracking-tight [text-wrap:balance]">
+            <span className="lg:block">Quem está por trás</span>{" "}
+            <span className="lg:block">deste material</span>
+          </h2>
           <p className="text-foreground/70 text-base sm:text-lg leading-relaxed font-light">
             O Gemba Group foi fundado em 2008 por Vânia Batista e Marcelo Rodrigues com um propósito que não mudou desde o primeiro dia: capacitar profissionais para transformar empresas.
           </p>
