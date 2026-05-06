@@ -11,6 +11,7 @@ const Index = () => (
     <BulletsSection />
     <AuthoritySection />
     <TestimonialsSection />
+    <div className="h-px w-full bg-[linear-gradient(to_right,transparent,hsl(var(--foreground)/0.25),transparent)]" />
     <AboutSection />
     <Footer />
   </main>
