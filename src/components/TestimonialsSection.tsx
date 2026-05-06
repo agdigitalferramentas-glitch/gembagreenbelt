@@ -39,7 +39,7 @@ const VideoCard = ({ id }: { id: string }) => {
           />
           <div className="absolute inset-0 bg-background/30 group-hover:bg-background/40 transition-colors" />
           <span className="absolute inset-0 flex items-center justify-center">
-            <span className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent text-accent-foreground shadow-[0_0_30px_hsla(156,58%,45%,0.5)] group-hover:scale-110 transition-transform">
+            <span className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.5)] group-hover:scale-110 transition-transform">
               <Play className="w-7 h-7 sm:w-8 sm:h-8 ml-1" fill="currentColor" />
             </span>
           </span>
