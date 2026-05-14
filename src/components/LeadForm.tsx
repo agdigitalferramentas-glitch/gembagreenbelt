@@ -44,7 +44,7 @@ const LeadForm = () => {
         body: JSON.stringify({
           name: parsed.data.name,
           email: parsed.data.email,
-          phone: digits,
+          phone: `+55${digits}`,
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
