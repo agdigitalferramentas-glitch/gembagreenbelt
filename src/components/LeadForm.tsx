@@ -3,15 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { z } from "zod";
 
-const FORM_ID = "18d01129-a244-4f98-8e77-a2aef73564db";
-const SUPABASE_URL = "https://gmemxbfibakfpsjbsvyt.supabase.co";
-const SUPABASE_ANON_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdtZW14YmZpYmFrZnBzamJzdnl0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAwNTMxOTQsImV4cCI6MjA4NTYyOTE5NH0.Aq7KveS7PwwAADPK-n0rz-CEYM0dTYZLnttTph1EfD0";
+const API_URL = "https://rcxrkvwxlzwzrllwdwgz.supabase.co/functions/v1/public-api/forms/18d01129-a244-4f98-8e77-a2aef73564db/submit";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
   email: z.string().trim().email("E-mail inválido").max(255),
-  whatsapp: z
+  phone: z
     .string()
     .trim()
     .min(10, "WhatsApp inválido")
@@ -31,7 +28,7 @@ const LeadForm = () => {
     setError(null);
 
     const digits = whatsapp.replace(/\D/g, "");
-    const parsed = schema.safeParse({ name, email, whatsapp: digits });
+    const parsed = schema.safeParse({ name, email, phone: digits });
     if (!parsed.success) {
       setError(parsed.error.errors[0].message);
       return;
@@ -39,21 +36,15 @@ const LeadForm = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/form_submissions`, {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-          "content-profile": "public",
         },
         body: JSON.stringify({
-          form_id: FORM_ID,
-          data: {
-            name: parsed.data.name,
-            email: parsed.data.email,
-            whatsapp: `+55${digits}`,
-          },
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: digits,
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
