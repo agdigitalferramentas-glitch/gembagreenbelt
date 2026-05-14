@@ -28,7 +28,7 @@ const LeadForm = () => {
     setError(null);
 
     const digits = whatsapp.replace(/\D/g, "");
-    const parsed = schema.safeParse({ name, email, whatsapp: digits });
+    const parsed = schema.safeParse({ name, email, phone: digits });
     if (!parsed.success) {
       setError(parsed.error.errors[0].message);
       return;
@@ -36,21 +36,15 @@ const LeadForm = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/form_submissions`, {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          apikey: SUPABASE_ANON_KEY,
-          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-          "content-profile": "public",
         },
         body: JSON.stringify({
-          form_id: FORM_ID,
-          data: {
-            name: parsed.data.name,
-            email: parsed.data.email,
-            whatsapp: `+55${digits}`,
-          },
+          name: parsed.data.name,
+          email: parsed.data.email,
+          phone: digits,
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
