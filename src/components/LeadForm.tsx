@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { z } from "zod";
 
-const API_URL = "https://rcxrkvwxlzwzrllwdwgz.supabase.co/functions/v1/public-api/forms/18d01129-a244-4f98-8e77-a2aef73564db/submit";
+const API_URL = "https://automacao.gembagroup.com.br/webhook/29448797-7eed-40a1-923a-70785ac16ab9";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
@@ -42,14 +42,17 @@ const LeadForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: parsed.data.name,
+          programa_elite: "Green Belt",
+          nome: parsed.data.name,
+          telefone: `+55${digits}`,
           email: parsed.data.email,
-          phone: `+55${digits}`,
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
+      console.log("Webhook submetido com sucesso");
       navigate("/gb-obrigado");
     } catch (err) {
+      console.error("Erro ao enviar webhook:", err);
       setError(err instanceof Error ? err.message : "Erro desconhecido");
     } finally {
       setLoading(false);
