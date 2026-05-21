@@ -42,14 +42,17 @@ const LeadForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: parsed.data.name,
+          programa_elite: "Green Belt",
+          nome: parsed.data.name,
+          telefone: `+55${digits}`,
           email: parsed.data.email,
-          phone: `+55${digits}`,
         }),
       });
       if (!res.ok) throw new Error("Falha ao enviar. Tente novamente.");
+      console.log("Webhook submetido com sucesso");
       navigate("/gb-obrigado");
     } catch (err) {
+      console.error("Erro ao enviar webhook:", err);
       setError(err instanceof Error ? err.message : "Erro desconhecido");
     } finally {
       setLoading(false);
