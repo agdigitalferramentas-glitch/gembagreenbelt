@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { z } from "zod";
 
-const API_URL = "https://rcxrkvwxlzwzrllwdwgz.supabase.co/functions/v1/public-api/forms/18d01129-a244-4f98-8e77-a2aef73564db/submit";
+const API_URL = "https://automacao.gembagroup.com.br/webhook/29448797-7eed-40a1-923a-70785ac16ab9";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Informe seu nome").max(100),
